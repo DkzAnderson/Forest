@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import background from '../../../backend/images/backgrounds/menu_principal.png'
 import { Link } from 'react-router-dom'
 import player from '../../../backend/data/player';
 
@@ -9,7 +8,6 @@ export const Principal = () => {
 
     const styles = {
         main : 'relative h-full w-full flex items-center justify-center',
-        background: 'absolute object-cover w-full h-full z-0',
         menuList : 'z-10 flex flex-col gap-4 text-2xl ',
         menuItems: 'font-metal text-3xl text-white text-center hover:text-yellow-800 cursor-pointer hover:tracking-widest hover:scale-125 duration-300'
     }
@@ -53,11 +51,6 @@ export const Principal = () => {
 
   return (
     <section className={styles.main}>
-        <img 
-            src={background} 
-            alt="" 
-            className={styles.background}
-        />
 
         <ul className={styles.menuList}>
             <li className={styles.menuItems}>

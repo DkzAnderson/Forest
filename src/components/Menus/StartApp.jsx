@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import backgroundL from '../../../backend/images/backgrounds/start_app.jpg'
-import backgroundS from '../../../backend/images/backgrounds/menu_principal.png';
 
 import player from '../../../backend/data/player';
 
@@ -22,10 +21,9 @@ export const StartApp = () => {
     const [overWrite, setOverWrite] = useState(false);
 
     let styles = {
-        main: 'w-full h-full relative font-metal ',
-        bckgS: 'absolute hidden sm:flex w-full h-full object-cover z-0 top-0 left-0',
-        bckgL: 'absolute sm:hidden w-full h-full object-cover z-0 top-0 left-0',
-        content: 'z-20 w-full h-full flex flex-col gap-20 border items-center justify-center ',
+        main: 'w-full h-full relative font-metal',
+        backgroundMobile: 'absolute flex sm:hidden w-full h-full object-cover z-0 top-0 left-0',
+        content: 'z-20 w-full h-full flex flex-col gap-20 items-center justify-center',
         options: 'z-20 w-10/12 h-32 p-2 flex flex-col rounded items-center justify-center',
         optionsTitle: 'text-white text-3xl cursor-pointer hover:text-yellow-700 hover:tracking-widest hover:scale-125 duration-300',
         title: 'z-20 font-metal text-white text-yellow-900 cursor-default',
@@ -120,16 +118,6 @@ export const StartApp = () => {
     if (savedGames != 'Empty' && seeFiles == false && newGame == false) {
         return (
             <section className={styles.main}>
-                <img
-                    src={backgroundS}
-                    alt='banckground'
-                    className={styles.bckgS}
-                />
-                <img
-                    src={backgroundL}
-                    alt='background'
-                    className={styles.bckgL}
-                />
 
                 <div className={styles.content}>
                     <h1 className={styles.title} style={{ fontSize: '90px' }}>
@@ -183,14 +171,9 @@ export const StartApp = () => {
                 </button>
 
                 <img
-                    src={backgroundS}
-                    alt='banckground'
-                    className={styles.bckgS}
-                />
-                <img
                     src={backgroundL}
                     alt='background'
-                    className={styles.bckgL}
+                    className={styles.backgroundMobile}
                 />
 
             </section>
@@ -198,16 +181,6 @@ export const StartApp = () => {
     } else if (newGame == true) { // Creación de perfil
         return (
             <section className={newGameStyles.main}>
-                <img
-                    src={backgroundS}
-                    alt='banckground'
-                    className={styles.bckgS}
-                />
-                <img
-                    src={backgroundL}
-                    alt='background'
-                    className={styles.bckgL}
-                />
 
                 <div className={newGameStyles.content} style={{ background: '#000000bf' }}>
                     <h2 className={newGameStyles.title} style={{ fontSize: `${newGameStyles.titleFontSize}` }}>
@@ -275,16 +248,6 @@ export const StartApp = () => {
     } else if (newGame == false) { // Iniciar juego a un usuario ya existente
         return (
             <section className={styles.main}>
-                <img
-                    src={backgroundS}
-                    alt='banckground'
-                    className={styles.bckgS}
-                />
-                <img
-                    src={backgroundL}
-                    alt='background'
-                    className={styles.bckgL}
-                />
 
                 <div className={styles.content}>
                     <h1 className={styles.title} style={{ fontSize: '120px' }}>
