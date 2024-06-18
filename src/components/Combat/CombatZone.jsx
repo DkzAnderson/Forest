@@ -14,7 +14,6 @@ export const CombatZone = () => {
 
     let styles = {
         main: 'relative w-full h-dvh flex-col bg-black flex',
-        background: 'absolute w-full h-full object-cover z-0',
         // top
         turns: 'absolute top-2 right-2 text-xl font-bold border px-5 rounded bg-gradient-to-br from-transparent to-black text-sky-300',
         top: 'z-10 grid h-3/5 grid-cols-2 place-items-center w-full',
@@ -244,12 +243,6 @@ export const CombatZone = () => {
         // menu de combate
         return (
             <section className={styles.main}>
-
-                <img
-                    className={styles.background}
-                    src={backgrounds.menu}
-                    alt=""
-                />
 
                 <section className={styles.top}>
                     <span className={styles.turns}>

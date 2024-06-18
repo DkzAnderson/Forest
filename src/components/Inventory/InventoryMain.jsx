@@ -102,11 +102,6 @@ export const InventoryMain = () => {
   } else {
     return (
       <section className={styleMain}>
-        <img
-          className='absolute w-full h-full z-0 opacity-60 object-cover'
-          src={backgrounds.menu}
-          alt=""
-        />
 
         <article className={topSide.main}>
           {

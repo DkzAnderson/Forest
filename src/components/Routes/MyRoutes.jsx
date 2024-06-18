@@ -9,17 +9,12 @@ import { CombatZone } from '../Combat/CombatZone'
 
 export const MyRoutes = () => {
     const mainStyles = {
-        main : 'w-full h-dvh flex items-center justify-center',
+        main : 'w-full h-full flex items-center justify-center',
         content: 'w-full h-full shadow-lg'
     }
     
     return (
         <section className={mainStyles.main}>
-            <img
-                className='absolute object-cover top-0 right-0 w-dvw h-dvh'
-                src="/backend/images/backgrounds/menu_principal.png"
-                alt="background"
-            />
             <div className={mainStyles.content}>
                 <BrowserRouter>
                     <Routes>
