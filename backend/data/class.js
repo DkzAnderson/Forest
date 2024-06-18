@@ -203,16 +203,13 @@ const Dictionary = {
     } 
 }
 
-function loadPlayerData(){
-
-}
 
 class equipableItem{
-    constructor(name,quality='Normal'){
+    constructor(name,quality='Normal',img){
         this.name = name;
         this.quality = quality;
         this.type = ''
-        
+        this.img = img;
         this.id = equipableID;
         equipableID = this.id+1
     }
@@ -752,9 +749,8 @@ class Material {
 // armaduras
 class Armor extends equipableItem{
     constructor(name,quality,img){
-        super(name,quality)
+        super(name,quality,img)
         this.type = 'Armadura'
-        this.image = `../../../backend/images/armors/${img}.webp`
         this.SetAtributes();
     }
 
@@ -836,25 +832,23 @@ class Armor extends equipableItem{
 
 class Helm extends equipableItem {
     constructor(name,quality,img){
-        super(name,quality)
+        super(name,quality,img)
         this.type = 'Casco'
-        this.image = `../../../backend/images/helms/Icon-${img}.webp`
         this.SetAtributes();
     }
 }
 
 class Accesory extends equipableItem{
     constructor(name,quality,img){
-        super(name,quality)
+        super(name,quality,img)
         this.type = 'Accesorio'
-        this.image = `../../../backend/images/accesories/${img}.webp`
         this.SetAtributes();
     }
 }
 //Armas
 class Weapons extends equipableItem{
-    constructor(name,quality){
-        super(name,quality)
+    constructor(name,quality,img){
+        super(name,quality,img)
         this.type = 'Arma';
         this.SetAtributes();
     }
@@ -862,46 +856,41 @@ class Weapons extends equipableItem{
 // Tipos de armas
 class Axe extends Weapons {
     constructor(name,quality,img){
-        super(name,quality)
+        super(name,quality,img)
         this.subType = 'Hacha';
-        this.image = `../../../backend/images/weapons/axes/${img}.webp`
         this.SetAtributes();
     }
 }
 
 class Lance extends equipableItem {
     constructor(name,quality,img){
-        super(name,quality)
+        super(name,quality,img)
         this.subType = 'Lanza';
         this.type = 'Arma'
-        this.image = `../../../backend/images/weapons/spears/${img}.webp`
         this.SetAtributes();
     }
 }
 
 class Dagger extends equipableItem {
     constructor(name,quality,img){
-        super(name,quality)
+        super(name,quality,img)
         this.subType = 'Daga';
-        this.image = `../../../backend/images/weapons/daggers/${img}.webp`
         this.SetAtributes();
     }
 }
 
 class Hammer extends equipableItem {
     constructor(name,quality,img){
-        super(name,quality)
+        super(name,quality,img)
         this.subType = 'Martillo';
-        this.image = `../../../backend/images/weapons/hammers/${img}.webp`
         this.SetAtributes();
     }
 }
 
 class Sword extends equipableItem {
     constructor(name,quality,img){
-        super(name,quality)
+        super(name,quality,img)
         this.subType = 'Espada';
-        this.image = `../../../backend/images/weapons/swords/${img}.webp`
         this.SetAtributes();
     }
 }
@@ -937,15 +926,13 @@ class Skill {
         //target.hp = target.hp + dmg
     }
 }
-
-
 // NPC 
 class Npc {
     constructor(name,type,img,
         range=Dictionary.ranges.normal){
         this.name = name
         this.type = type
-        this.image = `../../../backend/images/npc/${img}.gif`
+        this.image = img;
         this.rarity = range
         this.skills = []
         this.drops = []

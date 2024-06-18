@@ -1,8 +1,9 @@
 import crear from "./class";
+import playerImg from '../images/npc/LordOfDeath.gif'
 
 let player = {
   name: 'blodyMary',
-  image: '../../backend/images/npc/LordOfDeath.gif',
+  image: playerImg,
   atributes: [
     {
       name: 'ATQ', values: {
@@ -347,6 +348,5 @@ let player = {
 
   }
 }
-
 
 export default player;

@@ -9,8 +9,8 @@ export const ItemList = ({back,filter}) => {
   const [itemInfo,SetItemInfo] = useState(false);
   
   let styles = {
-    main : 'w-full h-full flex flex-col all',
-    list : 'overflow-auto flex flex-col w-full gap-2 px-2 z-20 bottomSide',
+    main : 'w-full h-full flex flex-col all rounded overflow-hidden',
+    list : 'overflow-auto max-h-[470px] flex flex-col w-full gap-2 px-2 z-20 bottomSide',
     itemList: {
       main : 'grid grid-cols-4 text-white w-full p-1 h-32 items-center border rounded-lg battlefield_menu-btn',
       image : 'w-full h-full object-contain p-2 rounded shadow-none',
@@ -36,7 +36,6 @@ export const ItemList = ({back,filter}) => {
       backBtn : 'z-20 w-full bg-red-500 border-white rounded text-xl font-bold active:bg-green-500'
     },
     btnsBox: 'w-full flex justify-between px-2 gap-4',
-    background: 'absolute w-full h-full z-0 opacity-60 object-cover'
   }
 
   itemInfo.quality === 'Legendario' ? styles.info.imgBox += ' border-orange-500 shadow-lg shadow-orange-500' : '';
@@ -152,11 +151,6 @@ export const ItemList = ({back,filter}) => {
   if (itemInfo == false) {
     return (
       <section className={styles.main}>
-        <img
-          className={styles.background}
-          src={backgrounds.menu}
-          alt=""
-        />
 
         <article className={styles.info.main}>
           <h4 className={styles.info.emptyTxt}>
@@ -204,7 +198,7 @@ export const ItemList = ({back,filter}) => {
                   <picture className={`${styles.itemList.imageBox} ${borde}`}>
                     <img
                       className={styles.itemList.image}
-                      src={item.image}
+                      src={item.img}
                       alt={item.name + '_poster'}
                     />
                   </picture>
@@ -342,18 +336,12 @@ export const ItemList = ({back,filter}) => {
   } else {
     return (
       <section className={styles.main}>
-        <img
-          className={styles.background}
-          src={backgrounds.menu}
-          alt=""
-        />
-
         <article className={styles.info.main}>
           <div className={styles.info.top}>
             <picture className={styles.info.imgBox}>
               <img
                 className={styles.info.img}
-                src={itemInfo.image}
+                src={itemInfo.img}
                 alt={itemInfo.name + '_poster'}
               />
             </picture>
@@ -511,7 +499,7 @@ export const ItemList = ({back,filter}) => {
                   <picture className={`${styles.itemList.imageBox} ${borde}`}>
                     <img
                       className={styles.itemList.image}
-                      src={item.image}
+                      src={item.img}
                       alt={item.name + '_poster'}
                     />
                   </picture>
@@ -583,7 +571,7 @@ export const ItemList = ({back,filter}) => {
                     <picture className={`${styles.itemList.imageBox} ${borde}`}>
                       <img
                         className={styles.itemList.image}
-                        src={item.image}
+                        src={item.img}
                         alt={item.name + '_poster'}
                       />
                     </picture>

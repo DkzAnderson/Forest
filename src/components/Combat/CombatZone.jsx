@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import backgrounds from '../../../backend/data/backgrounds';
 import combat from '../../../backend/data/combatFunctions';
 import player from '../../../backend/data/player';
 import Enemies from '../../../backend/data/npc';
@@ -13,7 +12,7 @@ export const CombatZone = () => {
     const [enemy,setEnemy] = useState(Enemies[0]);
 
     let styles = {
-        main: 'relative w-full h-full flex-col bg-black flex',
+        main: 'relative w-full h-full flex-col flex',
         // top
         turns: 'absolute top-2 right-2 text-xl font-bold border px-5 rounded bg-gradient-to-br from-transparent to-black text-sky-300',
         top: 'z-10 grid h-3/5 grid-cols-2 place-items-center w-full',
@@ -369,11 +368,6 @@ export const CombatZone = () => {
         // lista de habilidades
         return (
             <section className={styles.main}>
-                <img
-                    className={styles.background}
-                    src={backgrounds.menu}
-                    alt=""
-                />
 
                 <section className={styles.top}>
                     <span className={styles.turns}>

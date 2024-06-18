@@ -4,8 +4,8 @@ export const SlotEquiped = ({item, showInventory,name}) => {
 
     let styles = {
       main    : 'bg-blue-900 grid grid-cols-3 rounded-lg border border-black p-1 font-nunito',
-      imgBox  : 'w-full h-full bg-gray-900 border-2 p-1 rounded-lg shadow-none',
-      img     : 'w-full h-full object-contain',
+      imgBox  : 'size-full bg-gray-900 border-2 p-2 rounded-lg shadow-none',
+      img     : 'size-full object-scale-down',
       boxInfo : 'w-full p-1 px-3',
       titleBox: 'w-full items-center justify-center flex',
       titleBox2: 'hidden col-span-2',
@@ -51,7 +51,7 @@ export const SlotEquiped = ({item, showInventory,name}) => {
       <picture className={`${styles.imgBox} ${border}`}>
           <img
             className={styles.img} 
-            src={item.image}
+            src={item.img}
             alt={item.name} 
           />
       </picture>

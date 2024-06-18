@@ -1,6 +1,6 @@
 import crear from "./class";
 import materialsBox from "./materials";
-
+import images from './imagesData'
 
 
 const Dictionary = {
@@ -25,152 +25,149 @@ const Dictionary = {
 let Enemies = [
   // Normales
   crear.NpcNormal({name:"Mamut milenario",
-  type:Dictionary.types.Beast,image:'ancientMamut'}),
+  type:Dictionary.types.Beast,image:images.npc[7]}),
 
   crear.NpcNormal({name:"Atroce", 
-  type:Dictionary.types.Beast,image:"Atroce"}),
+  type:Dictionary.types.Beast,image:images.npc[2]}),
 
   crear.NpcNormal({name:"Bebe lobo de hielo", 
-  type:Dictionary.types.Beast,image:"babyIceWolf"}),
+  type:Dictionary.types.Beast,image:images.npc[9]}),
 
   crear.NpcNormal({name:"Oso", 
-  type:Dictionary.types.Beast,image:"bear"}),
+  type:Dictionary.types.Beast,image:images.npc[10]}),
 
   crear.NpcNormal({name:"Angel oscuro",
-  type:Dictionary.types.Undead,image:"darkAngel"}),
+  type:Dictionary.types.Undead,image:images.npc[14]}),
 
   crear.NpcNormal({name:"Arcangel oscuro",
-  type:Dictionary.types.Humanoid,image:"darkAngelMale"}),
+  type:Dictionary.types.Humanoid,image:images.npc[15]}),
 
   crear.NpcNormal({name:"Caballero oscuro",
-  type:Dictionary.types.Undead,image:"Darkknight"}),
+  type:Dictionary.types.Undead,image:images.npc[3]}),
 
   crear.NpcNormal({name:"Dragon oscuro",
-  type:Dictionary.types.Dragon,image:"dragonDark"}),
+  type:Dictionary.types.Dragon,image:images.npc[17]}),
 
   crear.NpcNormal({name:"Dragon rojo",
-  type:Dictionary.types.Dragon, image:"dragonRed"}),
+  type:Dictionary.types.Dragon, image:images.npc[19]}),
 
   crear.NpcNormal({name:"Ave fénix", 
-  type:Dictionary.types.Flying,image:"fireBird"}),
+  type:Dictionary.types.Flying,image:images.npc[24]}),
 
   crear.NpcNormal({name:"Pez muerto",
-  type:Dictionary.types.Undead, image:"fish"}),
-
-  crear.NpcNormal ({name:"Gnoll con martillo",
-  type:Dictionary.types.Humanoid,image:"Gnoll"}),
+  type:Dictionary.types.Undead, image:images.npc[25]}),
 
   crear.NpcNormal ({name:"Gnoll con hacha",
-  type:Dictionary.types.Humanoid,image:"gnollAxe"}),
+  type:Dictionary.types.Humanoid,image:images.npc[27]}),
 
   crear.NpcNormal({name:"Golem de piedra",
-  type:Dictionary.types.Element, image:"golemCrystal"}),
+  type:Dictionary.types.Element, image:images.npc[28]}),
 
   crear.NpcNormal ({name:"Grifo",
-  type:Dictionary.types.Flying,image: "gryphon"}),
+  type:Dictionary.types.Flying,image: images.npc[30]}),
 
   crear.NpcNormal ({name:"Gran león blanco",
-  type:Dictionary.types.Beast, image:"Hillsion"}),
+  type:Dictionary.types.Beast, image:images.npc[5]}),
 
   crear.NpcNormal ({name:"Salamandra de hielo",
-  type:Dictionary.types.Beast,image:'iceSalamander'}),
+  type:Dictionary.types.Beast,image:images.npc[31]}),
 
   crear.NpcNormal({name:"Lobo de hielo",
-  type:Dictionary.types.Beast,image:"iceWolf"}),
+  type:Dictionary.types.Beast,image:images.npc[32]}),
 
   crear.NpcNormal({name:"Cronos",
-  type:Dictionary.types.Humanoid,image:"mageChrono"}),
+  type:Dictionary.types.Humanoid,image:images.npc[35]}),
 
   crear.NpcNormal({name:"Mago oscuro", 
-  type:Dictionary.types.Undead,image:"mageDark"}),
+  type:Dictionary.types.Undead,image:images.npc[36]}),
 
   crear.NpcNormal({name:"Mantis religiosa",
-  type:Dictionary.types.Insect,image:"mantis"}),
+  type:Dictionary.types.Insect,image:images.npc[37]}),
 
   crear.NpcNormal({name:"Minotauro",
-  type:Dictionary.types.Humanoid,image:"minotaur"}),
+  type:Dictionary.types.Humanoid,image:images.npc[39]}),
 
   crear.NpcNormal({name:"Guerrero naga",
-  type:Dictionary.types.Acuatic,image: "naga"}),
+  type:Dictionary.types.Acuatic,image: images.npc[40]}),
 
   crear.NpcNormal({name:"Pesadilla",
-  type:Dictionary.types.Undead, image:"nightmare"}),
+  type:Dictionary.types.Undead, image:images.npc[41]}),
 
   crear.NpcNormal({name:"Caballero esqueleto",
-  type:Dictionary.types.Undead, image:"skeletonKnight"}),
+  type:Dictionary.types.Undead, image:images.npc[45]}),
 
   crear.NpcNormal ({name:"Araña verde",
-  type:Dictionary.types.Beast,image:"spiderGreen"}),
+  type:Dictionary.types.Beast,image:images.npc[47]}),
 
   crear.NpcNormal ({name:"Araña roja",
-  type:Dictionary.types.Beast, image:"spiderRed"}),
+  type:Dictionary.types.Beast, image:images.npc[48]}),
 
   crear.NpcNormal({name:"Dulce chica",
-  type:Dictionary.types.Humanoid,image:"sweetyGirl"}),
+  type:Dictionary.types.Humanoid,image:images.npc[50]}),
 
   crear.NpcNormal({name:'El "Cracken"',
-  type:Dictionary.types.Acuatic,image:"tentacruel"}),
+  type:Dictionary.types.Acuatic,image:images.npc[51]}),
 
   crear.NpcNormal({name:"Tortuga",
-  type:Dictionary.types.Acuatic,image:"turtle"}),
+  type:Dictionary.types.Acuatic,image:images.npc[52]}),
 
   crear.NpcNormal ({name:"Señor de las Valkyrs",
-  type:Dictionary.types.Humanoid, image:"valkyr"}),
+  type:Dictionary.types.Humanoid, image:images.npc[54]}),
 
   crear.NpcNormal ({name:"Lobo salvaje",
-  type:Dictionary.types.Beast,image: "wolf"}),
+  type:Dictionary.types.Beast,image: images.npc[58]}),
 
   // Raros
   crear.NpcRare ({name:"Caballero Sangriento", type:Dictionary.types.Humanoid,
-  image:"bloodKnight"}),
+  image:images.npc[11]}),
 
   crear.NpcRare({name:"Anima",type:Dictionary.types.Element,
-  image:"anima"}),
+  image:images.npc[8]}),
 
   crear.NpcRare({name:"Detaler",type:Dictionary.types.Dragon,
-  image:"dragon1"}),
+  image:images.npc[16]}),
 
   crear.NpcRare ({name:"Experimento-0", type:Dictionary.types.Element,
-  image:"experiment-0"}),
+  image:images.npc[20]}),
 
   crear.NpcRare ({name:"Experimento-22", type:Dictionary.types.Beast,
-  image:"experiment-22"}),
+  image:images.npc[21]}),
 
   crear.NpcRare ({name:"Experimento-47", type:Dictionary.types.Undead,
-  image:"experiment-47"}),
+  image:images.npc[22]}),
 
   crear.NpcRare ({name:"Señor de la muerte", type:Dictionary.types.Undead,
-  image:"LordOfDeath"}),
+  image:images.npc[6]}),
 
   crear.NpcRare({name:"Maya", type:Dictionary.types.Insect,
-  image:"maya"}),
+  image:images.npc[38]}),
 
   crear.NpcRare({name:"Reyna de las Valkyrs", type:Dictionary.types.Humanoid,
-  image:"valkyrFemale"}),
+  image:images.npc[55]}),
 
   crear.NpcRare({name:"Maestro guerrero",type: Dictionary.types.Humanoid,
-  image:"warriorMaster"}),
+  image:images.npc[57]}),
   // Jefes 
   crear.NpcBoss({name:"Rey Dragon", type: Dictionary.types.Dragon,
-  image:"dragonKing"}),
+  image:images.npc[18]}),
 
   crear.NpcBoss({name:"Wukong",type: Dictionary.types.Beast,
-  image:"fihgtKing"}),
+  image:images.npc[23]}),
 
   crear.NpcBoss({name:"Experimento-12",type: Dictionary.types.Undead,
-  image:"ghost"}),
+  image:images.npc[26]}),
 
   crear.NpcBoss({name:"Ifrit",type: Dictionary.types.Element,
-  image:"ifrit"}),
+  image:images.npc[33]}),
 
   crear.NpcBoss ({name:"Reyna de los insectos",type: Dictionary.types.Insect,
-  image:"insectQueen"}),
+  image:images.npc[34]}),
 
   crear.NpcBoss({name:"Araña de cristal",type: Dictionary.types.Beast,
-  image:"spiderCrystal"}),
+  image:images.npc[46]}),
 
   crear.NpcBoss ({name:"Lambda", type: Dictionary.types.Acuatic,
-  image:"vper"}),
+  image:images.npc[56]}),
 
 ]
 
