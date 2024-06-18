@@ -1,0 +1,52 @@
+    /* Estilos de los scrolls */
+.scrol::-webkit-scrollbar {
+    width: 10px;     /* Tamaño del scroll en vertical */
+    background: #85858563;
+    border-radius: 0 4px 4px 0;
+    overflow: hidden;
+}
+
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.scrol::-webkit-scrollbar-thumb {
+    background: cyan ;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.scrol::-webkit-scrollbar-thumb:hover {
+    background: #06486e;
+    
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.scrol::-webkit-scrollbar-thumb:active {
+    background-color: #af7a17;
+}
+
+.container::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 0 0 0 0;
+}
+
+/* Estilos de la interfaz de batalla */
+
+.battlefield_menu{
+    background-color: #00000085;
+}
+
+.battlefield_menu-btn{
+    background: linear-gradient(20deg, #394cb696 20%, #1421dbc5 55%);
+}
+
+.battlefield_menu-btn:hover{
+    background: linear-gradient(20deg, #394cb6 20%, #1421db 55%);
+}
+
+.battlefield_names{
+    background-color: #00000040;
+}
+
+.battlefield_description-window{
+    background: linear-gradient(20deg, #394cb6 20%, #1421db 55%);
+}

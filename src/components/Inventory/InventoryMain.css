@@ -1,0 +1,54 @@
+.right-arrow {
+    animation: RightMove infinite ease 0.7s;
+
+}
+
+.left-arrow {
+    animation: LeftMove infinite ease 0.7s;
+}
+
+.player-info{
+    background: #00000082;
+}
+
+.back-menu_btn{
+    background: linear-gradient(20deg, #394cb696 20%, #1421dbc5 55%);
+}
+
+.back-menu_btn:hover{
+    background: linear-gradient(20deg, #394cb6 20%, #1421db 55%);
+}
+
+.bar-out{
+    border: 1px solid white;
+    background: linear-gradient(2deg, #6a6a6ae9 23%, #000000ed 67%);
+}
+
+.bar-in{
+    background: linear-gradient(-3deg, #01ffff 40%, #26ca01 60%);
+}
+
+
+@keyframes RightMove {
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(12px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes LeftMove {
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(12px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}

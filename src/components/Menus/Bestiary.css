@@ -1,0 +1,28 @@
+.all{
+    background-color: #000425bf;
+}
+
+picture{
+    background: #00000082;
+    box-shadow: inset white 0px -6px 20px 0px;
+}
+
+.list_items,
+.btn{
+    background: linear-gradient(20deg, #394cb696 20%, #1421dbc5 55%);
+
+}
+
+.list_items:hover,
+.btn:hover{
+    background: linear-gradient(20deg, #394cb6 20%, #1421db 55%);
+}
+
+.icon_list{
+    width: 0;
+    height: 0;
+    border-left: 8px solid #000000;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    margin-left: 2px;
+}

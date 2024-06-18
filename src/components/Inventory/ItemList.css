@@ -1,0 +1,16 @@
+.topSide,
+.bottomSide{
+    background-color: #0000005e;
+}
+
+.item-info_image{
+    background-color: #000d38a2;
+}
+
+.bottomSide{
+    max-height: 52.5vh;
+    padding: 10px 10px 10px 10px;
+}
+.topSide{
+    min-height: 47.5vh;
+}
