@@ -9,10 +9,10 @@ import { CombatZone } from '../Combat/CombatZone'
 
 export const MyRoutes = () => {
     const mainStyles = {
-        main : 'w-full max-w-[600px] h-dvh flex items-center justify-center',
+        main : 'w-1/2 max-w-[600px] h-dvh flex items-center justify-center',
         content: 'w-full h-full shadow-lg'
     }
-// domo
+    
     return (
         <section className={mainStyles.main}>
             <img
