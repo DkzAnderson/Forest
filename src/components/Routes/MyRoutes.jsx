@@ -12,7 +12,7 @@ export const MyRoutes = () => {
         main : 'w-full max-w-[600px] h-dvh flex items-center justify-center',
         content: 'w-full h-full shadow-lg'
     }
-
+// domo
     return (
         <section className={mainStyles.main}>
             <img
