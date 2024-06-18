@@ -5,10 +5,14 @@
 body{
     width: 100%;
     height: 100vh;
-    background-color: gray;
+    background-image: url('../backend/images/backgrounds/start_app.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #root{
     width: 100%;
+    max-width: 600px;
     height: 100vh;
 }
