@@ -9,8 +9,8 @@ import { CombatZone } from '../Combat/CombatZone'
 
 export const MyRoutes = () => {
     const mainStyles = {
-        main : 'w-full h-full flex items-center justify-center',
-        content: 'w-full h-full shadow-lg'
+        main : 'size-full flex items-center justify-center',
+        content: 'size-full shadow-lg'
     }
     
     return (

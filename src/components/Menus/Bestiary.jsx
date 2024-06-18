@@ -9,7 +9,7 @@ export const Bestiary = () => {
 
   const mainStyles = {
     background : 'absolute w-full h-full object-cover z-0',
-    main       : 'relative w-full h-full flex flex-col all rounded-lg overflow-hidden',
+    main       : 'relative w-full h-[95%] flex flex-col all rounded-lg overflow-hidden',
     backButton : 'all w-full h-20  z-20 flex items-center justify-center text-white text-2xl'
   }
 
