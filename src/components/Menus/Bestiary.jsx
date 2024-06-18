@@ -16,7 +16,7 @@ export const Bestiary = () => {
   let infoStyles = {
     main: 'z-10 h-3/5 w-full flex flex-col all justify-between pt-4 px-1',
     poster: 'size-[60%] object-contain',
-    posterBox: 'w-4/5 h-3/5 sm:size-[340px] rounded-full self-center flex justify-center items-center',
+    posterBox: 'size-[250px] sm:size-[300px] md:size-[350px] rounded-full self-center flex justify-center items-center',
     name : 'text-center text-2xl text-white',
     infoBox : 'w-full h-44 flex flex-col justify-between border-t',
     infoBoxDiv:'w-full px-2',

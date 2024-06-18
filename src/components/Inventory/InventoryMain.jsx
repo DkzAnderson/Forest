@@ -42,7 +42,7 @@ export const InventoryMain = () => {
   let styleMain = 'size-full grid grid-rows-2 rounded-lg overflow-hidden';
 
   let topSide = {
-    main     : 'w-full grid grid-rows-5 z-20 ',
+    main     : 'w-full h-[90%] grid grid-rows-5 z-20 ',
     imageBox : 'w-full relative h-full flex justify-between row-span-3 shadow-none',
     image    : 'w-full h-full object-contain',
     statsBox : 'w-full flex flex-col border-t-2 h-full row-span-2',

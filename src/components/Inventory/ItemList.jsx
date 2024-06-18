@@ -28,7 +28,7 @@ export const ItemList = ({back,filter}) => {
       statTxt: 'text-white text-lg px-2 flex w-full justify-between',
       statValue: 'text-green-500',
       modBox : 'grid grid-cols-2 w-4/5 gap-x-2 ',
-      modLi : 'text-lg text-white flex w-full justify-between',
+      modLi : 'text-white flex w-full justify-between',
       modTxt:'',
       modValue: 'text-green-500 duration-300 animate-pulse',
       equipBtn: 'w-full bg-green-500 py-2 text-xl rounded font-bold',
