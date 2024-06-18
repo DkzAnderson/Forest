@@ -40,7 +40,7 @@ export const CombatZone = () => {
             enemyMp: ''
         },
         // bottom
-        bottom: 'w-full flex flex-col h-2/5 battlefield_menu z-10',
+        bottom: 'w-full flex flex-col h-2/5 battlefield_menu z-10 rounded-b-lg',
         container: 'w-full font-nunito text-white h-full grid grid-cols-2 gap-1 p-1',
         buttons: 'flex text-xl cursor-pointer duration-300 active:border-red-400 active:text-red-400 hover:tracking-widest items-center justify-center rounded-lg border-2 border-gray-400 battlefield_menu-btn',
         backButton: 'border text-white text-xl py-1 w-11/12 rounded mb-1 self-center battlefield_menu-btn'
@@ -520,9 +520,9 @@ export const CombatZone = () => {
         // lista de objetos
         return(
             <section className='size-full flex items-center justify-center'>
-                <div className='flex flex-col rounded-lg bg-black p-4 gap-10 justify-center items-center'>
+                <div className='flex flex-col text-center rounded-lg bg-black p-4 gap-10 justify-center items-center'>
                 <h2 className='text-2xl text-red-600'>
-                    Función aun en desarrollo por favor vuelva.
+                    Función aun en desarrollo porfavor vuelva.
                 </h2>
                 <Link to={'/menu'} className='text-white rounded py-2 px-6 border bg-green-700'>
                     Volver al menu

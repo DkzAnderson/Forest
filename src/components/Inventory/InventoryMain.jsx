@@ -39,10 +39,10 @@ export const InventoryMain = () => {
 
   }
 
-  let styleMain = 'w-full h-full grid grid-rows-2';
+  let styleMain = 'w-full h-full grid grid-rows-2 rounded-lg overflow-hidden';
 
   let topSide = {
-    main     : 'w-full grid grid-rows-5 z-20',
+    main     : 'w-full grid grid-rows-5 z-20 ',
     imageBox : 'w-full relative h-full flex justify-between row-span-3 shadow-none',
     image    : 'w-full h-full object-contain',
     statsBox : 'w-full flex flex-col border-t-2 h-full row-span-2',
@@ -57,6 +57,7 @@ export const InventoryMain = () => {
     menuBtn : 'border border-black w-11/12 self-center rounded text-lg text-white text-center back-menu_btn'
 
   }
+  
   PlayerInfo ? topSide.leftArrow += 'stroke-white' : topSide.leftArrow += 'stroke-transparent'
   PlayerInfo ? topSide.rightArrow += 'stroke-transparent' : topSide.rightArrow += 'stroke-white'
 

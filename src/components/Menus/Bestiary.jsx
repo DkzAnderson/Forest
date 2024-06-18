@@ -7,6 +7,12 @@ import { Link } from 'react-router-dom'
 export const Bestiary = () => {
   const [npc,setNpc] = useState(5);
 
+  const mainStyles = {
+    background : 'absolute w-full h-full object-cover z-0',
+    main       : 'relative w-full h-full flex flex-col all rounded-lg overflow-hidden',
+    backButton : 'all w-full h-20  z-20 flex items-center justify-center text-white text-2xl'
+  }
+
   let infoStyles = {
     main: 'z-10 h-3/5 w-full flex flex-col all justify-between pt-4 px-1',
     poster: 'size-[60%] object-contain',
@@ -36,12 +42,6 @@ export const Bestiary = () => {
     main :'relative h-72 w-full',
     content: 'size-full flex flex-col px-2 py-3 gap-1 overflow-auto all list',
     txt : 'px-2 py-2 h-11 border flex gap-2 duration-300 hover:tracking-widest cursor-pointer items-center text-lg text-white rounded list_items'
-  }
-
-  const mainStyles = {
-    background : 'absolute w-full h-full object-cover z-0',
-    main       : 'relative w-full h-full flex flex-col all',
-    backButton : 'all w-full h-20  z-20 flex items-center justify-center text-white text-2xl'
   }
     // color de textos de raza
   switch (Enemies[npc].type) {
