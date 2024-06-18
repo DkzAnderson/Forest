@@ -8,8 +8,8 @@ export const Bestiary = () => {
   const [npc,setNpc] = useState(5);
 
   const mainStyles = {
-    background : 'absolute w-full h-full object-cover z-0',
-    main       : 'relative w-full h-[95%] flex flex-col all rounded-lg overflow-hidden',
+    background : 'absolute size-full object-cover z-0',
+    main       : 'relative size-full flex flex-col all rounded-lg overflow-hidden',
     backButton : 'all w-full h-20  z-20 flex items-center justify-center text-white text-2xl'
   }
 

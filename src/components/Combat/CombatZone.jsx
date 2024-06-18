@@ -13,7 +13,7 @@ export const CombatZone = () => {
     const [enemy,setEnemy] = useState(Enemies[0]);
 
     let styles = {
-        main: 'relative w-full h-[95%] flex-col flex',
+        main: 'relative size-full flex-col flex',
         // top
         turns: 'absolute top-2 right-2 text-xl font-bold border px-5 rounded bg-gradient-to-br from-transparent to-black text-sky-300',
         top: 'z-10 grid h-3/5 grid-cols-2 place-items-center w-full',

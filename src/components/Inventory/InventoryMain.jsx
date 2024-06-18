@@ -39,7 +39,7 @@ export const InventoryMain = () => {
 
   }
 
-  let styleMain = 'w-full h-[95%] grid grid-rows-2 rounded-lg overflow-hidden';
+  let styleMain = 'size-full grid grid-rows-2 rounded-lg overflow-hidden';
 
   let topSide = {
     main     : 'w-full grid grid-rows-5 z-20 ',
