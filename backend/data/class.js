@@ -739,7 +739,7 @@ class Consumables {//revisar
 class Material {
     constructor(name,img){
         this.name = name;
-        this.img = `../../../backend/images/materials/${img}.webp`;
+        this.img = img;
         this.value = random(20,70);
         this.category = 'Material';
         this.id = materialID;

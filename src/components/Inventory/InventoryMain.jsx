@@ -116,7 +116,7 @@ export const InventoryMain = () => {
 
                 <img
                   className={topSide.image}
-                  src={player.image}
+                  src={player.img}
                   alt="Player_img"
                 />
                 <svg
@@ -125,6 +125,7 @@ export const InventoryMain = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
                 </svg>
               </picture> :
+              
               <ul className={topSide.playerInfo}>
                 <svg
                   onClick={e => { showPlayerInfo(!PlayerInfo) }}

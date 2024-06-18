@@ -3,8 +3,8 @@ import React from 'react'
 export const SlotEquiped = ({item, showInventory,name}) => {
 
     let styles = {
-      main    : 'bg-blue-900 grid grid-cols-3 rounded-lg border border-black p-1 font-nunito',
-      imgBox  : 'size-full bg-gray-900 border-2 p-2 rounded-lg shadow-none',
+      main    : 'bg-blue-900 grid grid-cols-3 rounded-lg border border-black p-1 sm:p-2 font-nunito',
+      imgBox  : 'w-full bg-gray-900 border-2 p-2 rounded-lg shadow-none',
       img     : 'size-full object-scale-down',
       boxInfo : 'w-full p-1 px-3',
       titleBox: 'w-full items-center justify-center flex',
@@ -24,10 +24,10 @@ export const SlotEquiped = ({item, showInventory,name}) => {
     if(item.type == 'Arma'){
       styles.main += ' col-span-2 grid-cols-4' 
       styles.title += ' text-lg '
-      styles.imgBox += 'col-span-1 shadow-none p-2'
+      styles.imgBox += 'col-span-1 sm:h-[90%] shadow-none'
       styles.boxInfo += ' col-span-3'
       stats.main += ' h-10/12 gap-x-3'
-      stats.atributes += 'h-8'
+      stats.atributes += 'h-8 sm:px-5'
 
     } else {
       styles.main += 'grid-cols-2 grid-rows-2'
@@ -35,7 +35,7 @@ export const SlotEquiped = ({item, showInventory,name}) => {
       styles.boxInfo = 'w-full h-full p-1 px-1 col-span-3 text-sm'
       styles.titleBox2 = 'w-full h-full items-center justify-center flex col-span-2'
       styles.titleBox = 'hidden'
-      stats.main += 'h-full gap-x-3'
+      stats.main += 'h-full gap-x-3 sm:gap-x-10'
     }
 
     let border = ''

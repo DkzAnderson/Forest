@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import equipableItems from '../../../backend/data/equipableItems';
 import player from '../../../backend/data/player.js'
-import backgrounds from '../../../backend/data/backgrounds.js';
 import './ItemList.css'
 
 export const ItemList = ({back,filter}) => {
@@ -9,21 +8,21 @@ export const ItemList = ({back,filter}) => {
   const [itemInfo,SetItemInfo] = useState(false);
   
   let styles = {
-    main : 'w-full h-full flex flex-col all rounded overflow-hidden',
-    list : 'overflow-auto max-h-[470px] flex flex-col w-full gap-2 px-2 z-20 bottomSide',
+    main : 'size-full flex flex-col all rounded overflow-hidden',
+    list : 'overflow-auto max-h-[460px] flex flex-col w-full gap-2 p-2 z-20 bottomSide list',
     itemList: {
-      main : 'grid grid-cols-4 text-white w-full p-1 h-32 items-center border rounded-lg battlefield_menu-btn',
-      image : 'w-full h-full object-contain p-2 rounded shadow-none',
+      main : 'grid grid-cols-4 text-white w-full p-1 h-32 items-center border rounded-lg item-list',
+      image : 'size-full object-contain p-2 rounded shadow-none',
       infoBox: 'flex flex-col col-span-3 h-11/12 w-full pl-4 text-sm',
       statsBox : 'grid grid-cols-2',
       imageBox : 'h-28 rounded p-1 border-2 shadow-none'
     },
     info : {
-      main : 'h-full w-full z-20 items-center justify-between flex flex-col pb-4 gap-2 topSide',
+      main : 'size-full min-h-[47.5vh] z-20 items-center justify-between flex flex-col pb-4 gap-2 topSide',
       emptyTxt: 'text-2xl h-80 items-center text-center flex font-bold text-white',
       top : 'w-full h-2/5 flex gap-2 items-center p-2 border-b-2',
       img : 'w-full h-full',
-      imgBox: 'p-4 w-32 h-32 object-contain border-2 rounded-lg item-info_image ',
+      imgBox: 'p-4 w-32 h-32 object-contain border-2 rounded-lg bg-transparent',
       title : 'w-10/12 h-full flex items-center justify-center',
       statBox: 'grid grid-cols-2 w-4/5 gap-x-2 ',
       statTxt: 'text-white text-lg px-2 flex w-full justify-between',
@@ -255,9 +254,7 @@ export const ItemList = ({back,filter}) => {
 
                 </li>
               )
-            }
-
-            if (filter == 'Accesorio 1' || filter == 'Accesorio 2') {
+            }else if (filter == 'Accesorio 1' || filter == 'Accesorio 2') {
               if (item.type == 'Accesorio') {
                 return (
                   <li
@@ -270,7 +267,7 @@ export const ItemList = ({back,filter}) => {
                     <picture className={`${styles.itemList.imageBox} ${borde}`}>
                       <img
                         className={styles.itemList.image}
-                        src={item.image}
+                        src={item.img}
                         alt={item.name + '_poster'}
                       />
                     </picture>

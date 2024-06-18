@@ -24,7 +24,7 @@
     background-color: #af7a17;
 }
 
-.container::-webkit-scrollbar-track {
+.scrol::-webkit-scrollbar-track {
     background: #e1e1e1;
     border-radius: 0 0 0 0;
 }

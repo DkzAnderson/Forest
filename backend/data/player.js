@@ -3,7 +3,7 @@ import playerImg from '../images/npc/LordOfDeath.gif'
 
 let player = {
   name: 'blodyMary',
-  image: playerImg,
+  img: playerImg,
   atributes: [
     {
       name: 'ATQ', values: {

@@ -1,16 +1,35 @@
-.topSide,
-.bottomSide{
-    background-color: #0000005e;
+
+.item-list{
+    background: linear-gradient(20deg, #394cb696 20%, #1421dbc5 55%);
 }
 
-.item-info_image{
-    background-color: #000d38a2;
+.item-list:hover{
+    background: linear-gradient(20deg, #394cb6 20%, #1421db 55%);
 }
 
-.bottomSide{
-    max-height: 52.5vh;
-    padding: 10px 10px 10px 10px;
+
+    /* Estilos de los scrolls */
+.list::-webkit-scrollbar {
+    width: 10px;     /* Tamaño del scroll en vertical */
+    background: #ffffff1f;
+    border-radius: 12px;
+    overflow: hidden;
 }
-.topSide{
-    min-height: 47.5vh;
+
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.list::-webkit-scrollbar-thumb {
+    background: #205ccc ;
+    border-radius: 12px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.list::-webkit-scrollbar-thumb:hover {
+    background: #9bac39;
+    
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.list::-webkit-scrollbar-thumb:active {
+    background-color: #0a610e;
 }

@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import Enemies from '../../../backend/data/npc'
-import backgrounds from '../../../backend/data/backgrounds'
-import x from '../../../backend/images/npc/ifrit.gif'
 import './Bestiary.css'
 import { Link } from 'react-router-dom'
 
@@ -11,13 +9,13 @@ export const Bestiary = () => {
 
   let infoStyles = {
     main: 'z-10 h-3/5 w-full flex flex-col all justify-between pt-4 px-1',
-    poster: 'w-full h-full object-contain',
-    posterBox: 'w-4/5 h-3/5 rounded-full self-center',
+    poster: 'size-[60%] object-contain',
+    posterBox: 'w-4/5 h-3/5 sm:size-[340px] rounded-full self-center flex justify-center items-center',
     name : 'text-center text-2xl text-white',
     infoBox : 'w-full h-44 flex flex-col justify-between border-t',
     infoBoxDiv:'w-full px-2',
-    skillList: 'grid grid-cols-2 gap-1 h-16 w-full px-4 justify-between justify-items-center list-decimal',
-    skillListItem:'text-sm text-gray-400 text-start w-32 self-center',
+    skillList: 'grid grid-cols-2 gap-1 h-16 w-full px-4 justify-between justify-items-center',
+    skillListItem:'text-sm text-gray-400 text-start sm:w-52 self-center',
     type : '',
     rarityBox: 'flex w-full justify-between text-white text-lg font-semibold',
     rarity: ''
@@ -35,7 +33,8 @@ export const Bestiary = () => {
   }
 
   const listStyles = {
-    main :'z-10 h-72 w-full flex flex-col px-2 gap-1  py-3 overflow-auto all',
+    main :'relative h-72 w-full',
+    content: 'size-full flex flex-col px-2 py-3 gap-1 overflow-auto all list',
     txt : 'px-2 py-2 h-11 border flex gap-2 duration-300 hover:tracking-widest cursor-pointer items-center text-lg text-white rounded list_items'
   }
 
@@ -100,11 +99,6 @@ export const Bestiary = () => {
 
   return (
     <section className={mainStyles.main}>
-      <img
-        className={mainStyles.background}
-        src={backgrounds.menu}
-        alt=""
-      />
 
       <article className={infoStyles.main}>
         <picture className={infoStyles.posterBox}>
@@ -147,12 +141,13 @@ export const Bestiary = () => {
 
           <ul className={infoStyles.skillList}>
             {
-              Enemies[npc].skills.map(skill => {
+              Enemies[npc].skills.map((skill,index) => {
+                let i = index++;
                 return (
                   <li 
                     key={skill.name}
                     className={infoStyles.skillListItem}>
-                    {skill.name}
+                    {`${index}. ${skill.name}`}
                   </li>
                 )
               })
@@ -167,41 +162,44 @@ export const Bestiary = () => {
         vean tan mal los elementos cortados,
         un efecto de desvanecimiento
       */}
-      <ul className={listStyles.main}>
-        {Enemies.map(enemy => {
-          let txtColor = 'text-yellow-500 font-bold'
-          let border = ' border-yellow-500'
+      <div className={listStyles.main}>
+        <ul className={listStyles.content}>
+          {Enemies.map(enemy => {
+            let txtColor = 'text-yellow-500 font-bold'
+            let border = ' border-yellow-500'
 
-          if (enemy.name == Enemies[npc].name) {
-            return (
-              <li
-                onClick={e => { ShowNpcDescription(enemy.id) }}
-                className={listStyles.txt + border}
-                key={enemy.id}
-              >
-                <div className='icon_list'></div>
-                <h5 className={txtColor}>
-                  {enemy.name}
-                </h5>
-              </li>
-            )
-          } else {
-            return (
-              <li
-                onClick={e => { ShowNpcDescription(enemy.id) }}
-                className={listStyles.txt}
-                key={enemy.id}
-              >
-                <div className='icon_list'></div>
-                <h5>
-                  {enemy.name}
-                </h5>
-              </li>
-            )
-          }
+            if (enemy.name == Enemies[npc].name) {
+              return (
+                <li
+                  onClick={e => { ShowNpcDescription(enemy.id) }}
+                  className={listStyles.txt + border}
+                  key={enemy.id}
+                >
+                  <div className='icon_list'></div>
+                  <h5 className={txtColor}>
+                    {enemy.name}
+                  </h5>
+                </li>
+              )
+            } else {
+              return (
+                <li
+                  onClick={e => { ShowNpcDescription(enemy.id) }}
+                  className={listStyles.txt}
+                  key={enemy.id}
+                >
+                  <div className='icon_list'></div>
+                  <h5>
+                    {enemy.name}
+                  </h5>
+                </li>
+              )
+            }
 
-        })}
-      </ul>
+          })}
+        </ul>
+      </div>
+
 
       <div className={mainStyles.backButton}>
         <Link

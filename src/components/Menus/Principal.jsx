@@ -70,10 +70,18 @@ export const Principal = () => {
                 Bestiario
                 </Link>
             </li>
-            
-            <li className={styles.menuItems}>
-                Tutoriales
-            </li>
+            {
+                /*
+
+                Falta implementar
+
+                <li className={styles.menuItems}>
+                    Tutoriales
+                </li>
+                
+                */
+            }
+
             <li 
                 className={styles.menuItems}
                 onClick={()=>{SaveGame()}}

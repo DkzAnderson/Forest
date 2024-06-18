@@ -3,6 +3,7 @@ import { useState } from 'react';
 import combat from '../../../backend/data/combatFunctions';
 import player from '../../../backend/data/player';
 import Enemies from '../../../backend/data/npc';
+import { Link } from 'react-router-dom';
 
 export const CombatZone = () => {
     const random = (min,max)=>{
@@ -18,8 +19,8 @@ export const CombatZone = () => {
         top: 'z-10 grid h-3/5 grid-cols-2 place-items-center w-full',
         content: {
             main: 'z-10 w-full h-full flex flex-col py-8 items-center justify-between',
-            image: 'h-full w-full object-contain',
-            imageBox: 'h-3/5 w-full px-2 py-3 shadow-none bg-transparent',
+            image: 'size-full object-contain',
+            imageBox: 'size-[70%] px-2 py-3 shadow-none bg-transparent',
             nameBox: 'w-full h-20 flex items-center justify-center battlefield_names',
             name: 'font-metal text-2xl text-center text-yellow-600',
         },
@@ -162,9 +163,14 @@ export const CombatZone = () => {
         setInterfaz('objects')
     }
 
+    function scape(e){
+        console.log(e)
+        setInterfaz('objects')
+    }
+
     function ShowSkills(e){
         console.log(e)
-        setInterfaz('skills')
+        setInterfaz('objects')
     }
 
     function DescriptionArticle (skill=''){
@@ -251,7 +257,7 @@ export const CombatZone = () => {
                     <section className={styles.content.main}>
                         <picture className={styles.content.imageBox}>
                             <img className={styles.content.image} style={{ transform: 'scaleX(-1)' }}
-                                src={player.image}
+                                src={player.img}
                                 alt={player.name}
                             />
                         </picture>
@@ -355,7 +361,7 @@ export const CombatZone = () => {
                         </li>
 
                         <li
-                            //funcion para huida
+                            onClick={e=> {scape(e)}}
                             className={styles.buttons}>
                             HUIR
                         </li>
@@ -377,7 +383,7 @@ export const CombatZone = () => {
                     <section className={styles.content.main}>
                         <picture className={styles.content.imageBox}>
                             <img className={styles.content.image} style={{ transform: 'scaleX(-1)' }}
-                                src={player.image}
+                                src={player.img}
                                 alt={player.name}
                             />
                         </picture>
@@ -512,5 +518,18 @@ export const CombatZone = () => {
         )
     } else {
         // lista de objetos
+        return(
+            <section className='size-full flex items-center justify-center'>
+                <div className='flex flex-col rounded-lg bg-black p-4 gap-10 justify-center items-center'>
+                <h2 className='text-2xl text-red-600'>
+                    Función aun en desarrollo por favor vuelva.
+                </h2>
+                <Link to={'/menu'} className='text-white rounded py-2 px-6 border bg-green-700'>
+                    Volver al menu
+                </Link>
+                </div>
+
+            </section>
+        )
     }
 }
