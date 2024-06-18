@@ -39,7 +39,7 @@ export const Bestiary = () => {
   }
 
   const listStyles = {
-    main :'relative h-72 w-full',
+    main :'relative h-[250px] w-full',
     content: 'size-full flex flex-col px-2 py-3 gap-1 overflow-auto all list',
     txt : 'px-2 py-2 h-11 border flex gap-2 duration-300 hover:tracking-widest cursor-pointer items-center text-lg text-white rounded list_items'
   }
